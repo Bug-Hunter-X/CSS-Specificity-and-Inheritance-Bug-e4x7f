@@ -1,0 +1,17 @@
+The following CSS code snippet demonstrates a potential issue related to specificity and inheritance:
+
+```css
+div {
+  color: blue;
+}
+
+p {
+  color: red;
+}
+
+div p {
+  color: green;
+}
+```
+
+In this example, the `<p>` element within the `<div>` element will inherit the `color: blue;` style from its parent.  The `div p` selector has higher specificity and overrides this, resulting in the text being green. However, if the specificity is altered slightly or another selector with equal or higher specificity is added, unexpected behavior can occur, potentially making the troubleshooting process difficult.
