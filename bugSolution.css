@@ -1,0 +1,33 @@
+The solution involves using more specific selectors or the `!important` flag (though `!important` should be used sparingly) to explicitly control the style application:
+
+```css
+div {
+  color: blue;
+}
+
+p {
+  color: red;
+}
+
+div p {
+  color: green !important; /* Or adjust selectors for better specificity */
+}
+```
+
+Alternatively, a more structured approach with better defined classes might improve clarity and maintainability:
+
+```css
+.container {
+  color: blue;
+}
+
+.special-paragraph {
+  color: red;
+}
+
+.container .special-paragraph {
+  color: green;
+}
+```
+
+In this version, classes directly control styles, making it more maintainable and easier to predict.
